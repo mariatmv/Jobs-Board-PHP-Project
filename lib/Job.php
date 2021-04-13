@@ -7,7 +7,7 @@ class Job{
     }
 
     public function getAllJobs(){
-        $this->db->query("SELECT * FROM jobs_board.jobs");
+        $this->db->query("SELECT * FROM jobs_board.jobs ORDER BY date_posted DESC");
 
         $results = $this->db->resultSet();
         return $results;
